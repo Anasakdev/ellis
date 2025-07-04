@@ -1,0 +1,9 @@
+services: #serviços da sua aplicação FastAPI
+  api:
+    build: . #construção da imagem a partir do Dockerfile
+    image: api:latest #nome da imagem
+    container_name: api #nome do contêiner
+    ports:
+      - "8000:8000" #mapeamento de portas
+    volumes:
+      - .:/app #montagem do diretório atual no contêiner (onde está o código da aplicação)
